@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<head>
+  <title>World Bank Indicators</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div id = "page-wrapper">
+    <div id="controls-wrapper">
+      <h1>Plot Controls</h1>
+      <hr>
+      <div class="form-block">
+        <label for="xvar">Variable on X axis</label>
+        <select id="xvar" name="xvar_select" class="form-control">
+          <option value="empty" selected disabled style="display: none;">Select an option</option>
+<option value="gni">GNI per capita, PPP (current international $)</option><option value="lifeexp">Life Expectancy at Birth (years)</option><option value="under5">Mortality Rate, under 5 (per 1,000 live births)</option><option value="prenatal">Pregnant women receiving prenatal care (%)</option><option value="impsan">Improved sanitation facilities (% of population with access)</option><option value="dpt">Immunization, DPT (% of children ages 12-23 months)</option><option value="healthexp">Health expenditure per capita (current US$)</option>
+        </select>
+      </div>
+      <div class="form-block">
+        <label for="yvar">Variable on Y axis</label>
+        <select id="yvar" name="yvar_select" class="form-control">
+          <option value="empty" selected disabled style="display: none;">Select an option</option>
+<option value="gni">GNI per capita, PPP (current international $)</option><option value="lifeexp">Life Expectancy at Birth (years)</option><option value="under5">Mortality Rate, under 5 (per 1,000 live births)</option><option value="prenatal">Pregnant women receiving prenatal care (%)</option><option value="impsan">Improved sanitation facilities (% of population with access)</option><option value="dpt">Immunization, DPT (% of children ages 12-23 months)</option><option value="healthexp">Health expenditure per capita (current US$)</option>
+        </select>
+      </div>
+      <div class="form-block">
+      <label for="regionCheck">Regions</label>
+        <fieldset id="regionCheck" class="form-control">
+          <input class="regionFilter" type="checkbox" id="Eas" value="Eas" checked><label for="Eas">East Asia & Pacific</label></br>
+          <input class="regionFilter" type="checkbox" id="Eur" value="Eur" checked><label for="Eur">Europe & Central Asia</label></br>
+          <input class="regionFilter" type="checkbox" id="Lat" value="Lat" checked><label for="Lat">Latin America & Caribbean</label></br>
+          <input class="regionFilter" type="checkbox" id="Mid" value="Mid" checked><label for="Mid">Middle East & North Africa</label></br>
+          <input class="regionFilter" type="checkbox" id="Nor" value="Nor" checked><label for="Nor">North America</label></br>
+          <input class="regionFilter" type="checkbox" id="Sou" value="Sou" checked><label for="Sou">South Asia</label></br>
+          <input class="regionFilter" type="checkbox" id="Sub" value="Sub" checked><label for="Sub">Sub-Saharan Africa</label>
+        </fieldset>
+      </div>
+      <div class="form-block">
+        <input id="labelsCheck" type="checkbox" class="form-control" checked><label for="labelsCheck">Labels</label></br>
+      </div>
+      <div class="form-block">
+        <label for="labelsSize">Label Size</label></br>
+        <input id="labelsSize" type="range" value="10" min="6" max="16" step="2" class="form-control">
+      </div>
+    </div>
+    <div id="chart-wrapper">
+      <div id="chart-div">
+        <div id="tooltip" class="hidden">
+          <p id="countryname"></p>
+          <p>Population: <span id="pop"></span></p>
+          <p id="xvartip"></p>
+          <p id="yvartip"></p>
+        </div>
+      </div>
+      <text id="footnote">Data from World Bank Open Data: <a href="http://data.worldbank.org" target="_blank">
+                            http://data.worldbank.org</a>.  Retrieved on 07/06/2015.</text>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="D3bubbleplot.js"></script>
+</body>
