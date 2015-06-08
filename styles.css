@@ -1,0 +1,76 @@
+/* General */
+body {
+	font-family: serif;
+}
+#page-wrapper {
+	display: inline-flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+/* Controls Form */
+#controls-wrapper {
+  width: 15%;
+  margin: 20px;
+  padding: 15px;
+  border: 5px solid #666;
+  border-radius: 3%;
+  background: linear-gradient(135deg, #eee, #ddd);
+  box-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+#controls-wrapper h1{
+  margin: 0;
+}
+.form-block {
+  display: block;
+  margin: 8px 0px 20px;
+}
+.form-control {
+  margin-top: 5px;
+}
+select {
+  padding: 4px;
+  width: 100%;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.05) inset;
+}
+#regionCheck {
+  border: 1px inset #aaa;
+  padding-bottom: 4px;
+}
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+/* Plot elements */
+#chart-div {
+	margin-left: 50px;
+	text-align: center;
+	border: 2px solid #000;
+}
+#footnote {
+  margin-left: 50px;
+}
+.dot {
+	opacity: .7;
+}
+.xaxis, .yaxis {
+	fill: none;
+	stroke: #000;
+}
+text {
+    stroke: none;
+    fill: #222;
+}
+g.node:hover {
+	cursor: pointer;
+}
+#tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  max-width: 150px;
+  border-radius: 10%;
+}
+#tooltip.hidden {
+	opacity: 0;
+}
