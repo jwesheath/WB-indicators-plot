@@ -61,16 +61,11 @@ text {
     stroke: none;
     fill: #222;
 }
-g.node:hover {
-	cursor: pointer;
-}
 #tooltip {
   position: absolute;
   text-align: center;
   padding: 5px;
   max-width: 150px;
   border-radius: 10%;
-}
-#tooltip.hidden {
-	opacity: 0;
+  opacity: 0;
 }
