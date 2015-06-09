@@ -125,7 +125,7 @@ html_bottom = '''
     </div>
     <div id="chart-wrapper">
       <div id="chart-div">
-        <div id="tooltip" class="hidden">
+        <div id="tooltip">
           <p id="countryname"></p>
           <p>Population: <span id="pop"></span></p>
           <p id="xvartip"></p>

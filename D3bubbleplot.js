@@ -272,7 +272,18 @@ d3.select("#labelsSize").on("change", function() {
 // Tooltips appear on mouseover
 d3.selectAll("g.node").on("mouseover", function(d) {
 
-    // Select all .dots and increase border width
+    // If this bubble is hidden (r == 0)...
+    if(d3.select(this).select(".dot").attr("r") == 0){
+        
+        // Keep cursor from changing on hidden nodes and do nothing else
+        d3.select(this).style("cursor", "default");
+        return;
+    }
+
+    // Change mouseover cursor
+    d3.select(this).style("cursor", "pointer");
+
+    // Select .dot, increase border width, and change pointer type
     d3.select(this).select(".dot")
                     .transition()
                     .attr("stroke-width", "7");
@@ -349,7 +360,7 @@ d3.selectAll("g.node").on("mouseover", function(d) {
 })
 
 // Tooltips disappear on mouseout...
-.on("mouseout", function() {
+.on("mouseout", function(d) {
 
     // Return selected .dot's border width to normal
     d3.select(this).select(".dot")
