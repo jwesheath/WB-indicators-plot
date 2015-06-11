@@ -142,7 +142,7 @@ html_bottom = '''
 '''
 
 # Today's date for footnote
-date = time.strftime("%d/%m/%Y")
+date = time.strftime("%m/%d/%Y")
 
 # Concatenate HTML chunks, populating dropdowns with var labels
 output = html_top
